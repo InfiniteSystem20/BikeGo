@@ -22,8 +22,8 @@ namespace ProjetoBikeBase.Models.DAO
         {
             try
             {
-                /*String sql = "insert into tbProduto(NomeProd, Qtd, Valor, StatusProd)"
-                  values (@NomeProd, @Qtd, @Valor, @StatusProd);*/
+                /*String sql = "insert into tbProduto(NomeProd, Qtd, Valor, StatusProd)"+
+                  "values (@NomeProd, @Qtd, @Valor, @StatusProd)";*/
 
                 String sql = "CALL cadProduto(@NomeProd, @Qtd, @Valor, @StatusProd)";
                 con = new MySqlConnection(_conexaoMySQL);

@@ -21,7 +21,8 @@ namespace ProjetoBikeBase.Controllers
 
         // CADASTRAR PRODUTO
         [HttpPost]
-        public ActionResult CadastroProtudo(ProdutoDTO produto)
+        public ActionResult CadastroProduto(ProdutoDTO produto)
+        
         {
             if (ModelState.IsValid)
             {
