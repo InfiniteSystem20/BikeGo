@@ -52,5 +52,5 @@ namespace ProjetoBikeBase.Models.DAO
             {
                 con.Close();
             }
-        }
+     }   }
 }
