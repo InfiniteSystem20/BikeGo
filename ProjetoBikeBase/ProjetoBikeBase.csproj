@@ -178,6 +178,7 @@
     <Content Include="Views\Cliente\CadastroCliente.cshtml" />
     <Content Include="Views\Produto\CadastroProduto.cshtml" />
     <Content Include="Views\Aluguel\CadastoAluguel.cshtml" />
+    <Content Include="Views\Cliente\ListarCliente.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

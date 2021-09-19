@@ -52,5 +52,55 @@ namespace ProjetoBikeBase.Models.DAO
             {
                 con.Close();
             }
-     }   }
+        }
+
+        public List<ClienteDTO> selectListCliente()
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(_conexaoMySQL))
+                {
+                    // using (MySqlCommand command = new MySqlCommand("Select * from tbCliente", conn))
+                    using (MySqlCommand command = new MySqlCommand("call SelecionarCliente();", conn))
+                    //
+                    {
+                        conn.Open();
+                        List<ClienteDTO> listaCliente = new List<ClienteDTO>();
+                        using (MySqlDataReader dr = command.ExecuteReader())
+                        {
+                            while (dr.Read())
+                            {
+                                ClienteDTO cliente = new ClienteDTO();
+                                cliente.IdCliente = (int)dr["IdCliente"];
+                                cliente.NomeCliente = (String)dr["NomeCliente"];
+                                cliente.CPFCliente = (String)dr["CPFCliente"];
+                                cliente.TelCliente = (String)dr["TelCliente"];
+                                cliente.EmailCliente = (String)dr["EmailCliente"];
+                                cliente.EndCliente = (String)dr["EndCliente"];
+                                // (DateTime)dr["dataDespesa"]
+                                cliente.NascCli = Convert.ToDateTime(dr["NascCli"]).ToString("dd'/'MM'/'yyyy");
+
+                                // cliente.Veiculo.IdVeiculo = (int)dr["idveiculo"];
+                                //  cliente.Usuario.Codigo = (int)dr["id"];
+
+
+                                listaCliente.Add(cliente);
+                            }
+                        }
+                        return listaCliente;
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+
+                throw new Exception("Erro no banco ao Listar usuario" + ex.Message);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro na aplicação ao Listar usuario" + ex.Message);
+            }
+        }
+    }
 }

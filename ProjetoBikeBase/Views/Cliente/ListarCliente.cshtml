@@ -1,0 +1,70 @@
+﻿@model IEnumerable<ProjetoBikeBase.Models.DTO.ClienteDTO>
+
+@{
+    ViewBag.Title = "ListarCliente";
+}
+
+<h2>Lista de Clientes</h2>
+
+<p>
+    @Html.ActionLink("Casdastro novo", "CadastroCliente", "Cliente")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CPFCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NascCli)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPFCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NascCli)
+            </td>
+            <td>
+                @Html.ActionLink("Atualizar", "editarCliente", new { id = item.IdCliente }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = item.IdCliente }) |
+                @Html.ActionLink("Excluir", "ExcluirCliente", new { id = item.IdCliente }, new { onclick = "return confirm('Deseja realmente excluir?');" })
+            </td>
+        </tr>
+    }
+
+</table>

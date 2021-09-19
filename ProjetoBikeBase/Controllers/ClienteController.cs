@@ -37,6 +37,10 @@ namespace ProjetoBikeBase.Controllers
             }
             return View();
         }
+        public ActionResult ListarCliente()
+        {
+            return View(clienteDLL.listaCliente());
+        }
 
         // GET: Cliente
         public ActionResult Index()
