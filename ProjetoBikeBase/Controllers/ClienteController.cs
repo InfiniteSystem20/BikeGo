@@ -18,6 +18,8 @@ namespace ProjetoBikeBase.Controllers
         {
             return View();
         }
+
+
         // CADASTRAR CLIENTE
         [HttpPost]
         public ActionResult CadastroCliente(ClienteDTO cliente)
