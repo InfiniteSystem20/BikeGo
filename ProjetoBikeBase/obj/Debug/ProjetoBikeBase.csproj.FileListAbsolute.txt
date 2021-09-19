@@ -182,4 +182,51 @@ C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\ob
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.csproj.CopyComplete
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.dll
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.pdb
+<<<<<<< HEAD
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.csprojAssemblyReference.cache
+=======
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\ProjetoBikeBase.dll.config
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\ProjetoBikeBase.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\ProjetoBikeBase.pdb
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\Antlr3.Runtime.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\MySql.Data.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\Newtonsoft.Json.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\System.Web.Helpers.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\System.Web.Mvc.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\System.Web.Optimization.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\System.Web.Razor.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\System.Web.WebPages.Deployment.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\System.Web.WebPages.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\System.Web.WebPages.Razor.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\WebGrease.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\Google.Protobuf.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\Zstandard.Net.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\BouncyCastle.Crypto.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\Ubiety.Dns.Core.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\Renci.SshNet.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\System.Buffers.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\K4os.Compression.LZ4.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\K4os.Hash.xxHash.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\System.Memory.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\System.Numerics.Vectors.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\MySql.Data.xml
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\System.Web.Helpers.xml
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\System.Web.Mvc.xml
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\System.Web.Optimization.xml
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\System.Web.Razor.xml
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\System.Web.WebPages.xml
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\System.Web.WebPages.Deployment.xml
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\System.Web.WebPages.Razor.xml
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\Newtonsoft.Json.xml
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\Antlr3.Runtime.pdb
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.csproj.AssemblyReference.cache
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.csproj.CoreCompileInputs.cache
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.csproj.CopyComplete
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.dll
+C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.pdb
+>>>>>>> 23827f7e5629fb630e539b977ccdf0a9e75ed071

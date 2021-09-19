@@ -29,7 +29,7 @@ namespace ProjetoBikeBase.Controllers
 
                 return RedirectToAction(nameof(CadastroCliente));
 
-                /* ViewBag.msg = "Cliene cadastrado com sucesso!";
+                /* ViewBag.msg = "Cliente cadastrado com sucesso!";
                     return View();
                 */
             }
