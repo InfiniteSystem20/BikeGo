@@ -182,3 +182,4 @@ C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\ob
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.csproj.CopyComplete
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.dll
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.pdb
+C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.csprojAssemblyReference.cache
