@@ -123,11 +123,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProdutoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DAO\AluguelDAO.cs" />
     <Compile Include="Models\DAO\ClienteDAO.cs" />
+    <Compile Include="Models\DAO\ProdutoDAO.cs" />
     <Compile Include="Models\DLL\ClienteDLL.cs" />
+    <Compile Include="Models\DLL\ProdutoDLL.cs" />
     <Compile Include="Models\DTO\AluguelDTO.cs" />
     <Compile Include="Models\DTO\ClienteDTO.cs" />
     <Compile Include="Models\DTO\ProdutoDTO.cs" />
@@ -170,6 +174,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Cliente\CadastroCliente.cshtml" />
+    <Content Include="Views\Produto\CadastroProduto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
