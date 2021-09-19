@@ -22,10 +22,15 @@ namespace ProjetoBikeBase.Models.DAO
         {
             try
             {
+<<<<<<< HEAD
+                String sql = "insert into tbProduto(NomeProd, Qtd, Valor, StatusProd)" +
+                  "values(@NomeProd, @Qtd, @Valor, @StatusProd)";
+=======
                 /*String sql = "insert into tbProduto(NomeProd, Qtd, Valor, StatusProd)"+
                   "values (@NomeProd, @Qtd, @Valor, @StatusProd)";*/
+>>>>>>> 05391b9a14bcacc2c343b701559e39e20e85e26e
 
-                String sql = "CALL cadProduto(@NomeProd, @Qtd, @Valor, @StatusProd)";
+                //String sql = "CALL cadProduto(@NomeProd, @Qtd, @Valor, @StatusProd)";
                 con = new MySqlConnection(_conexaoMySQL);
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@NomeProd", produto.NomeProd);
