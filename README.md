@@ -1,2 +1,2 @@
 # BikeGo
-Sistema de aluguel de bicicletas para parque
+Sistema de aluguel de bicicletas para parque.
