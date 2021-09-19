@@ -37,11 +37,23 @@ namespace ProjetoBikeBase.Controllers
             }
             return View();
         }
+        //LISTAR CLIENTE
         public ActionResult ListarCliente()
         {
             return View(clienteDLL.listaCliente());
         }
-
+        // UPDATE CLIENTE        
+        public ActionResult EditarCliente(int id)
+        {
+            return View(clienteDLL.listaCliente().Find(clienteDTO => clienteDTO.IdCliente == id));
+        }
+        // EDITAR CLIENTE
+        [HttpPost]
+        public ActionResult EditarCliente(ClienteDTO cl)
+        {
+            clienteDLL.alteraCliente(cl);
+            return RedirectToAction(nameof(ListarCliente));
+        }
         // GET: Cliente
         public ActionResult Index()
         {

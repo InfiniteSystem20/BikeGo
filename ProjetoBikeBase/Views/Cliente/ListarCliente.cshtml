@@ -60,10 +60,8 @@
                 @Html.DisplayFor(modelItem => item.NascCli)
             </td>
             <td>
-                @Html.ActionLink("Atualizar", "editarCliente", new { id = item.IdCliente }) |
-                @Html.ActionLink("Detalhes", "Details", new { id = item.IdCliente }) |
-                @Html.ActionLink("Excluir", "ExcluirCliente", new { id = item.IdCliente }, new { onclick = "return confirm('Deseja realmente excluir?');" })
-            </td>
+                @Html.ActionLink("Atualizar", "editarCliente", new { id = item.IdCliente })
+                
         </tr>
     }
 

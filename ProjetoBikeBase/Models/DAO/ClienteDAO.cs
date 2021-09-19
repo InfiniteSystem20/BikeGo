@@ -18,6 +18,7 @@ namespace ProjetoBikeBase.Models.DAO
         {
             _conexaoMySQL = ConfigurationManager.ConnectionStrings["conexaoMySQL"].ToString();
         }
+        //CADASTRO CLIENTE
         public void inserirCliente(ClienteDTO cliente)
         {
             try
@@ -53,7 +54,7 @@ namespace ProjetoBikeBase.Models.DAO
                 con.Close();
             }
         }
-
+        //LISTAR CLIENTE
         public List<ClienteDTO> selectListCliente()
         {
             try
@@ -100,6 +101,45 @@ namespace ProjetoBikeBase.Models.DAO
             {
 
                 throw new Exception("Erro na aplicação ao Listar usuario" + ex.Message);
+            }
+        }
+        // UPDATE CLIENTE
+        public void updateCliente(ClienteDTO cliente)
+        {
+            try
+            {
+                String sql = " UPDATE tbCliente SET NomeCliente=@NomeCliente,CPFCliente=@CPFCliente,TelCliente=@TelCliente, " +
+                            " EmailCliente=@EmailCliente, EndCliente=@EndCliente, NascCli=@NascCli   WHERE IdCliente = @IdCliente ";
+                //String sql = " CALL AlterCliente()NomeCliente=@NomeCliente,CPFCliente=@CPFCliente,TelCliente=@TelCliente," +
+                //             " EmailCliente=@EmailCliente, EndCliente=@EndCliente, NascCli=@NascCli   WHERE IdCliente = @IdCliente";
+
+                //AlterCliente
+                con = new MySqlConnection(_conexaoMySQL);
+                MySqlCommand cmd = new MySqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@IdCliente", cliente.IdCliente);
+                cmd.Parameters.AddWithValue("@NomeCliente", cliente.NomeCliente);
+                cmd.Parameters.AddWithValue("@CPFCliente", cliente.CPFCliente);
+                cmd.Parameters.AddWithValue("@TelCliente", cliente.TelCliente);
+                cmd.Parameters.AddWithValue("@EmailCliente", cliente.EmailCliente);
+                cmd.Parameters.AddWithValue("@EndCliente", cliente.EndCliente);
+                cmd.Parameters.AddWithValue("@NascCli", Convert.ToDateTime(cliente.NascCli));
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+
+                throw new Exception("Erro no banco ao atualizar dados do Cliente" + ex.Message);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro na aplicação ao atualizar dados do Cliente" + ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
         }
     }

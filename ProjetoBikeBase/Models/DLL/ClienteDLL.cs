@@ -37,5 +37,18 @@ namespace ProjetoBikeBase.Models.DLL
                 throw ex;
             }
         }
+        //UPDATE CLIENTE        
+        public void alteraCliente(ClienteDTO cliente)
+        {
+            try
+            {
+                dal = new ClienteDAO();
+                dal.updateCliente(cliente);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
