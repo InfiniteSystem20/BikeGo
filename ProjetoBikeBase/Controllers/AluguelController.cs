@@ -3,9 +3,12 @@ using ProjetoBikeBase.Models.DAO;
 using ProjetoBikeBase.Models.DTO;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace ProjetoBikeBase.Controllers
 {
@@ -13,7 +16,8 @@ namespace ProjetoBikeBase.Controllers
     {
         AluguelDAO aluguelDAO = new AluguelDAO();
         AluguelDTO aluguelDTO = new AluguelDTO();
-        
+        AluguelDLL aluguelDLL = new AluguelDLL();
+
         //CARREGAR CLIENTES
         public void carregarClientes()
         {
@@ -91,6 +95,18 @@ namespace ProjetoBikeBase.Controllers
             {
                 ViewBag.msg = "Horário indisponível, por favor escolaher outra data/hora";
             }
+            return View();
+        }
+
+        public ActionResult ALuguelDetalhes()
+        {
+            GridView gvAtend = new GridView();
+            gvAtend.DataSource = aluguelDLL.selecionaAluguel();
+            gvAtend.DataBind();
+            StringWriter sw = new StringWriter();
+            HtmlTextWriter htw = new HtmlTextWriter(sw);
+            gvAtend.RenderControl(htw);
+            ViewBag.GridViewString = sw.ToString();
             return View();
         }
 

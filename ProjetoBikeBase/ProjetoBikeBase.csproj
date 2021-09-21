@@ -132,6 +132,7 @@
     <Compile Include="Models\DAO\ClienteDAO.cs" />
     <Compile Include="Models\DAO\Conexao.cs" />
     <Compile Include="Models\DAO\ProdutoDAO.cs" />
+    <Compile Include="Models\DLL\AluguelDLL.cs" />
     <Compile Include="Models\DLL\ClienteDLL.cs" />
     <Compile Include="Models\DLL\ProdutoDLL.cs" />
     <Compile Include="Models\DTO\AluguelDTO.cs" />
