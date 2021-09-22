@@ -77,13 +77,8 @@ namespace ProjetoBikeBase.Models.DAO
                                 cliente.CPFCliente = (String)dr["CPFCliente"];
                                 cliente.TelCliente = (String)dr["TelCliente"];
                                 cliente.EmailCliente = (String)dr["EmailCliente"];
-                                cliente.EndCliente = (String)dr["EndCliente"];
-                                // (DateTime)dr["dataDespesa"]
+                                cliente.EndCliente = (String)dr["EndCliente"];                                
                                 cliente.NascCli = Convert.ToDateTime(dr["NascCli"]).ToString("dd'/'MM'/'yyyy");
-
-                                // cliente.Veiculo.IdVeiculo = (int)dr["idveiculo"];
-                                //  cliente.Usuario.Codigo = (int)dr["id"];
-
 
                                 listaCliente.Add(cliente);
                             }

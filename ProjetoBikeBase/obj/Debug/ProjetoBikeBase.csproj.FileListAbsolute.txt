@@ -90,8 +90,6 @@ C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase
 C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.csproj.CopyComplete
 C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.dll
 C:\Users\1kn\Desktop\Projeto Paralelo Aluguel Bicicleta\Programa\BikeGo\BikeBase\Proj.BikeBG\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.pdb
-C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.dll
-C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.pdb
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\bin\ProjetoBikeBase.dll.config
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\bin\ProjetoBikeBase.dll
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\bin\ProjetoBikeBase.pdb
@@ -182,3 +180,5 @@ C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\bi
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.csprojAssemblyReference.cache
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.csproj.CoreCompileInputs.cache
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.csproj.CopyComplete
+C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.dll
+C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.pdb

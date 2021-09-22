@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ProjetoBikeBase.Models.DTO.AluguelBuscaDTO>
+
+@{
+    ViewBag.Title = "ListarAluguel";
+}
+
+<h2>ListarAluguel</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdAluguel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bicicleta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataAtend)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoraAtend)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HrFinal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorTotal)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdAluguel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bicicleta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataAtend)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoraAtend)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HrFinal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorTotal)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

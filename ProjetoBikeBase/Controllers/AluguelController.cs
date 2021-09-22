@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using ProjetoBikeBase.Models.DAO;
+using ProjetoBikeBase.Models.DLL;
 using ProjetoBikeBase.Models.DTO;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace ProjetoBikeBase.Controllers
     {
         AluguelDAO aluguelDAO = new AluguelDAO();
         AluguelDTO aluguelDTO = new AluguelDTO();
-        AluguelDLL aluguelDLL = new AluguelDLL();
+        AluguelBuscaDLL aluguelBuscaDLL = new AluguelBuscaDLL();
 
         //CARREGAR CLIENTES
         public void carregarClientes()
@@ -90,6 +91,7 @@ namespace ProjetoBikeBase.Controllers
                 aluguelDTO.IdProduto = Request["Prod"];
                 aluguelDAO.inserirAluguel(aluguelDTO);
                 ViewBag.msg = "Agendamento realizado com sucesso";
+                return RedirectToAction(nameof(ListarAluguel));
             }
             else
             {
@@ -98,10 +100,18 @@ namespace ProjetoBikeBase.Controllers
             return View();
         }
 
+
+
+        public ActionResult ListarAluguel()
+        {
+            return View(aluguelBuscaDLL.listaAluguel());
+        }
+
         public ActionResult ALuguelDetalhes()
         {
             GridView gvAtend = new GridView();
-            gvAtend.DataSource = aluguelDLL.selecionaAluguel();
+            gvAtend.AutoGenerateColumns = false;
+            gvAtend.DataSource = aluguelDAO.selecionaAlugel();
             gvAtend.DataBind();
             StringWriter sw = new StringWriter();
             HtmlTextWriter htw = new HtmlTextWriter(sw);

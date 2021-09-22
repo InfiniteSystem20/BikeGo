@@ -128,6 +128,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DAO\AluguelBuscaDAO.cs" />
+    <Compile Include="Models\DLL\AluguelBuscaDLL.cs" />
+    <Compile Include="Models\DTO\AluguelBuscaDTO.cs" />
     <Compile Include="Models\DAO\AluguelDAO.cs" />
     <Compile Include="Models\DAO\ClienteDAO.cs" />
     <Compile Include="Models\DAO\Conexao.cs" />
@@ -181,6 +184,8 @@
     <Content Include="Views\Aluguel\CadastoAluguel.cshtml" />
     <Content Include="Views\Cliente\ListarCliente.cshtml" />
     <Content Include="Views\Cliente\EditarCliente.cshtml" />
+    <Content Include="Views\Aluguel\ALuguelDetalhes.cshtml" />
+    <Content Include="Views\Aluguel\ListarAluguel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
