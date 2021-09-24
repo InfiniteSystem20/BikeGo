@@ -6,6 +6,16 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+
+    <!-- Bootstrap core CSS -->   
+    <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
+
+   
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -31,6 +41,26 @@
         </div>
     </div>
     <div class="container body-content">
+
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+
+
+        <script src="~/Scripts/jquery.js" /></script>
+        <script src="~/Scripts/jquery-mask.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="~/Scripts/js-bootstrap.js"></script>
+        <script type="text/javascript">
+    $(function () {
+                $('[data-toggle="popover"]').popover();
+            });
+
+            $(document).ready(function () {
+                $(".navbar-toggle").click(function () {
+                    $(".sidebar").toggleClass("sidebar-open");
+                })
+            });</script>
+
         @RenderBody()
         <hr />
         <footer>

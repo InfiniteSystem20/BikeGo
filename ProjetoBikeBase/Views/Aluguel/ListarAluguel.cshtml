@@ -4,7 +4,7 @@
     ViewBag.Title = "ListarAluguel";
 }
 
-<h2>ListarAluguel</h2>
+<h2>aluguéis</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -59,9 +59,11 @@
             @Html.DisplayFor(modelItem => item.ValorTotal)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+
+
+            @Html.ActionLink("Excluir", "excluirPaciente", new { id = item.IdAluguel }, new { onclick = "return confirm('Deseja realmente excluir?');" })
         </td>
     </tr>
 }

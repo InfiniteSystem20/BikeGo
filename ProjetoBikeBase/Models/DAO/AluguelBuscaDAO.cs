@@ -38,10 +38,12 @@ namespace ProjetoBikeBase.Models.DAO
                                 aluguel.IdAluguel = (int)dr["Código"];
                                 aluguel.NomeCliente = (String)dr["Cliente"];
                                 aluguel.Bicicleta = (String)dr["Bicicleta"];
-                                aluguel.DataAtend = (String)dr["Data"];
+                                aluguel.DataAtend = Convert.ToDateTime( dr["Data"]).ToString("dd'/'MM'/'yyyy");
                                 aluguel.HoraAtend = (String)dr["Inicil"];
                                 aluguel.HrFinal = (String)dr["Final"];
                                 aluguel.ValorTotal = (decimal)dr["Total"];
+
+                                //cliente.NascCli = Convert.ToDateTime(dr["NascCli"]).ToString("dd'/'MM'/'yyyy");
 
 
 

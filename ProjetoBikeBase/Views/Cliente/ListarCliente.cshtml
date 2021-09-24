@@ -3,13 +3,13 @@
 @{
     ViewBag.Title = "ListarCliente";
 }
-
 <h2>Lista de Clientes</h2>
 
 <p>
     @Html.ActionLink("Casdastro novo", "CadastroCliente", "Cliente")
 </p>
-<table class="table">
+
+<table id="ListaClientes" class="table table-striped table-hover table-sm">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.IdCliente)
@@ -32,7 +32,7 @@
         <th>
             @Html.DisplayNameFor(model => model.NascCli)
         </th>
-        <th></th>
+        <th>Ação</th>
     </tr>
 
     @foreach (var item in Model)
@@ -54,15 +54,25 @@
                 @Html.DisplayFor(modelItem => item.TelCliente)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EndCliente)
+                <button type="button" class="btn btn-secondary btn-sm" data-container="body"
+                        data-toggle="popover" data-placement="top"
+                        data-content="@item.EndCliente">
+                    <span class="fas fa-eye" title="Visualizar" aria-hidden="true"></span>
+                </button>
             </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.EndCliente)
+                </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.NascCli)
             </td>
             <td>
                 @Html.ActionLink("Atualizar", "editarCliente", new { id = item.IdCliente })
-                
+
         </tr>
     }
 
 </table>
+
+
+

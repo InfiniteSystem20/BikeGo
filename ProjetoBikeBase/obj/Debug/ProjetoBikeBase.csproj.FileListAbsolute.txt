@@ -177,8 +177,8 @@ C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\bi
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\bin\Newtonsoft.Json.xml
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\bin\Antlr3.Runtime.pdb
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.csprojAssemblyReference.cache
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.csproj.CoreCompileInputs.cache
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.csproj.CopyComplete
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.dll
 C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.pdb
+C:\_Arquivos_Mega\PROJETO_ASP.NET\ProjetoBike_Git\Proj.BikeGo\ProjetoBikeBase\obj\Debug\ProjetoBikeBase.csprojAssemblyReference.cache
