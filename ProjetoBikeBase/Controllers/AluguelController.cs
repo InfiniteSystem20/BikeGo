@@ -18,6 +18,7 @@ namespace ProjetoBikeBase.Controllers
         AluguelDAO aluguelDAO = new AluguelDAO();
         AluguelDTO aluguelDTO = new AluguelDTO();
         AluguelBuscaDLL aluguelBuscaDLL = new AluguelBuscaDLL();
+        AluguelBuscaDTO aluguelBuscaDTO = new AluguelBuscaDTO(); 
 
         //CARREGAR CLIENTES
         public void carregarClientes()
@@ -100,12 +101,12 @@ namespace ProjetoBikeBase.Controllers
             return View();
         }
 
-
-
+        //Listar Aluguel
         public ActionResult ListarAluguel()
         {
             return View(aluguelBuscaDLL.listaAluguel());
         }
+        //AluguelBuscaDTO Detalhes
 
         public ActionResult ALuguelDetalhes()
         {
@@ -118,6 +119,19 @@ namespace ProjetoBikeBase.Controllers
             gvAtend.RenderControl(htw);
             ViewBag.GridViewString = sw.ToString();
             return View();
+        }
+
+        // CANCELAR ALUGUEL
+        public ActionResult CancelarAluguel(int id)
+        {
+            return View(aluguelBuscaDLL.listaAluguel().Find(aluguelBuscaDTO => aluguelBuscaDTO.IdAluguel == id));
+        }
+        // CANCELAR ALUGUEL
+        [HttpPost]
+        public ActionResult CancelarAluguel(AluguelBuscaDTO cl)
+        {
+            aluguelBuscaDLL.CancelarAlugeul(cl);
+            return RedirectToAction(nameof(ListarAluguel));
         }
 
         // GET: Aluguel

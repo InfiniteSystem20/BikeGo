@@ -25,5 +25,18 @@ namespace ProjetoBikeBase.Models.DLL
                 throw ex;
             }
         }
+        //ALTERAR CLIENTE
+        public void CancelarAlugeul(AluguelBuscaDTO Aluguel)
+        {
+            try
+            {
+                dal = new AluguelBuscaDAO();
+                dal.CancelarAluguel(Aluguel);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

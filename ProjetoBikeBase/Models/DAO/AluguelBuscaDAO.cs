@@ -43,11 +43,6 @@ namespace ProjetoBikeBase.Models.DAO
                                 aluguel.HrFinal = (String)dr["Final"];
                                 aluguel.ValorTotal = (decimal)dr["Total"];
 
-                                //cliente.NascCli = Convert.ToDateTime(dr["NascCli"]).ToString("dd'/'MM'/'yyyy");
-
-
-
-
                                 listaAluguel.Add(aluguel);
                             }
                         }
@@ -64,6 +59,46 @@ namespace ProjetoBikeBase.Models.DAO
             {
 
                 throw new Exception("Erro na aplicação ao Listar usuario" + ex.Message);
+            }
+        }
+        //CANCELAR ALUGUEL
+        public void CancelarAluguel(AluguelBuscaDTO aluguel)
+        {
+            string StatusAlug = "Cancelado";
+
+            try
+            {
+                String sql = "UPDATE tbAluguel set StatusAlug = @StatusAlug where IdAluguel = @IdAluguel ";
+
+                //String sql = " UPDATE tbAluguel SET NomeCliente=@NomeCliente,CPFCliente=@CPFCliente,TelCliente=@TelCliente, " +
+                //            " EmailCliente=@EmailCliente, EndCliente=@EndCliente, NascCli=@NascCli   WHERE IdCliente = @IdCliente ";
+
+                //String sql = " CALL AlterCliente()NomeCliente=@NomeCliente,CPFCliente=@CPFCliente,TelCliente=@TelCliente," +
+                //             " EmailCliente=@EmailCliente, EndCliente=@EndCliente, NascCli=@NascCli   WHERE IdCliente = @IdCliente";
+
+                //AlterCliente
+                con = new MySqlConnection(_conexaoMySQL);
+                MySqlCommand cmd = new MySqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@IdAluguel", aluguel.IdAluguel);
+                cmd.Parameters.AddWithValue("@StatusAlug", StatusAlug);
+                ;
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+
+                throw new Exception("Erro no banco ao atualizar dados do Aluguel" + ex.Message);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro na aplicação ao atualizar dados do Aluguel" + ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
         }
     }

@@ -24,5 +24,18 @@ namespace ProjetoBikeBase.Models.DLL
                 throw ex;
             }
         }
+        //SELECIONA LISTA de PRODUTTO
+        public List<ProdutoDTO> listaProduto()
+        {
+            try
+            {
+                dal = new ProdutoDAO();
+                return dal.selectListProdutos();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

@@ -25,6 +25,7 @@ namespace ProjetoBikeBase.Models.DTO
 
         [Display(Name = "Hr. Final")]
         public string HrFinal { get; set; }
+        public string StatusAlug { get; set; }
 
         [Display(Name = "Valor Total")]
         public decimal ValorTotal { get; set; }

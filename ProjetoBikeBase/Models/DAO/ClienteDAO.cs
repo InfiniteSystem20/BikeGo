@@ -23,9 +23,6 @@ namespace ProjetoBikeBase.Models.DAO
         {
             try
             {
-                //String sql = "INSERT INTO tbCliente (NomeCliente, CPFCliente, TelCliente, EmailCliente, EndCliente, NascCli) " +
-                //                           " VALUES (@NomeCliente, @CPFCliente, @TelCliente, @EmailCliente, @EndCliente, @NascCli)";
-
                 String sql = "CALL cadCliente(@NomeCliente, @CPFCliente, @TelCliente, @EmailCliente, @EndCliente, @NascCli)";
                 con = new MySqlConnection(_conexaoMySQL);
                 MySqlCommand cmd = new MySqlCommand(sql, con);

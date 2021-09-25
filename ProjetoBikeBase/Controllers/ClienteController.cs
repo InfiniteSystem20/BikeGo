@@ -11,7 +11,7 @@ namespace ProjetoBikeBase.Controllers
     public class ClienteController : Controller
     {
         ClienteDLL clienteDLL = new ClienteDLL();
-        ClienteDTO clienteDTO = new ClienteDTO();
+        ClienteDTO clienteDTO = new ClienteDTO(); 
 
         // CADASTRAR CLIENTE
         public ActionResult CadastroCliente()

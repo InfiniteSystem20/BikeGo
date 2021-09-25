@@ -1,4 +1,4 @@
-﻿ using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using ProjetoBikeBase.Models.DTO;
 using System;
 using System.Collections.Generic;
@@ -22,15 +22,7 @@ namespace ProjetoBikeBase.Models.DAO
         {
             try
             {
-
-                String sql = "insert into tbProduto(NomeProd, Qtd, Valor, StatusProd)" +
-                  "values(@NomeProd, @Qtd, @Valor, @StatusProd)";
-
-                /*String sql = "insert into tbProduto(NomeProd, Qtd, Valor, StatusProd)"+
-                  "values (@NomeProd, @Qtd, @Valor, @StatusProd)";*/
-
-
-                //String sql = "CALL cadProduto(@NomeProd, @Qtd, @Valor, @StatusProd)";
+                String sql = "CALL cadProduto(@NomeProd, @Qtd, @Valor, @StatusProd)";
                 con = new MySqlConnection(_conexaoMySQL);
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@NomeProd", produto.NomeProd);
@@ -55,6 +47,48 @@ namespace ProjetoBikeBase.Models.DAO
             finally
             {
                 con.Close();
+            }
+        }
+        // Selecionar Lista Produto
+
+        public List<ProdutoDTO> selectListProdutos()
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(_conexaoMySQL))
+                {
+                    using (MySqlCommand command = new MySqlCommand("call SelecionarProduto();", conn))
+                    {
+                        conn.Open();
+                        List<ProdutoDTO> listaProduto = new List<ProdutoDTO>();
+                        using (MySqlDataReader dr = command.ExecuteReader())
+                        {
+                            while (dr.Read())
+                            {
+                                ProdutoDTO produto = new ProdutoDTO();
+                                produto.IdProduto = (int)dr["IdProduto"];
+                                produto.NomeProd = (String)dr["NomeProd"];
+                                produto.Qtd = (int)dr["Qtd"];
+                                produto.Valor = (decimal)dr["Valor"];
+                                produto.StatusProd = (String)dr["StatusProd"];
+
+
+                                listaProduto.Add(produto);
+                            }
+                        }
+                        return listaProduto;
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+
+                throw new Exception("Erro no banco ao Listar produto" + ex.Message);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro na aplicação ao Listar produto" + ex.Message);
             }
         }
     }

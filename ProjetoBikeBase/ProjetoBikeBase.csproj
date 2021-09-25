@@ -232,6 +232,8 @@
     <Content Include="Views\Cliente\EditarCliente.cshtml" />
     <Content Include="Views\Aluguel\ALuguelDetalhes.cshtml" />
     <Content Include="Views\Aluguel\ListarAluguel.cshtml" />
+    <Content Include="Views\Produto\ListarProduto.cshtml" />
+    <Content Include="Views\Aluguel\CancelarAluguel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -32,7 +32,7 @@
         <th>
             @Html.DisplayNameFor(model => model.ValorTotal)
         </th>
-        <th></th>
+        <th>Ação</th>
     </tr>
 
 @foreach (var item in Model) {
@@ -62,8 +62,7 @@
             @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
         @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
 
-
-            @Html.ActionLink("Excluir", "excluirPaciente", new { id = item.IdAluguel }, new { onclick = "return confirm('Deseja realmente excluir?');" })
+            @Html.ActionLink("Cancelar", "CancelarAluguel", new { id = item.IdAluguel }, new { onclick = "return confirm('Deseja realmente Cancelar?');" })
         </td>
     </tr>
 }

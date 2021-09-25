@@ -40,17 +40,19 @@ namespace ProjetoBikeBase.Models.DAO
         }
         public void inserirAluguel(AluguelDTO cm)
         {
+            string StatusAlug = "Alugado";
 
-            MySqlCommand cmd = new MySqlCommand("insert into tbAluguel(DataAtend, HoraAtend, HrFinal, ValorTotal, IdCliente, IdProduto)" +
-                                                "values (@DataAtend, @HoraAtend,@HrFinal, @ValorTotal,@IdCliente, @IdProduto)", con.MyConectarBD());
+            //MySqlCommand cmd = new MySqlCommand("insert into tbAluguel(DataAtend, HoraAtend, HrFinal, ValorTotal, IdCliente, IdProduto)" +
+            //                                    "values (@DataAtend, @HoraAtend,@HrFinal, @ValorTotal,@IdCliente, @IdProduto)", con.MyConectarBD());
 
-            //MySqlCommand cmd = new MySqlCommand("cadAluguel(@DataAtend, @HoraAtend,@HrFinal, @ValorTotal,@IdCliente, @IdProduto);", con.MyConectarBD());
+            MySqlCommand cmd = new MySqlCommand("CALL cadAluguel(@DataAtend, @HoraAtend,@HrFinal, @ValorTotal,@IdCliente, @IdProduto, @StatusAlug);", con.MyConectarBD());
             cmd.Parameters.Add("@DataAtend", MySqlDbType.VarChar).Value = cm.DataAtend;
             cmd.Parameters.Add("@HoraAtend", MySqlDbType.VarChar).Value = cm.HoraAtend;
             cmd.Parameters.Add("@HrFinal", MySqlDbType.VarChar).Value = cm.HrFinal;
-            cmd.Parameters.Add("@ValorTotal", MySqlDbType.VarChar).Value = cm.ValorTotal;
+            cmd.Parameters.Add("@ValorTotal", MySqlDbType.Decimal).Value = cm.ValorTotal;
             cmd.Parameters.Add("@IdCliente", MySqlDbType.Int32).Value = cm.IdCliente;
             cmd.Parameters.Add("@IdProduto", MySqlDbType.Int32).Value = cm.IdProduto;
+            cmd.Parameters.Add("@StatusAlug", MySqlDbType.VarChar).Value = StatusAlug;
 
             cmd.ExecuteNonQuery();
             con.MyDesConectarBD();
@@ -63,7 +65,7 @@ namespace ProjetoBikeBase.Models.DAO
                                            " FROM tbAluguel as t1 " +
                                            " INNER JOIN tbCliente as t2 ON t1.IdCliente = t2.IdCliente " +
                                                " INNER JOIN tbProduto as t3 ON t1.IdProduto = t3.IdProduto; ", con.MyConectarBD());
-            //MySqlCommand cmd = new MySqlCommand("CALL SelecionarAluguel( )", con.MyConectarBD());
+            //MySqlCommand	Bike Aro 22 cmd = new MySqlCommand("CALL SelecionarAluguel( )", con.MyConectarBD());
 
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataTable atend = new DataTable();

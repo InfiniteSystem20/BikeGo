@@ -28,14 +28,18 @@ namespace ProjetoBikeBase.Controllers
             {
                 produtoDLL.novoProduto(produto);
 
+                ViewBag.msg = "Produto cadastrado com sucesso!";
+                return RedirectToAction(nameof(ListarProduto));
 
-                return RedirectToAction(nameof(CadastroProduto));
-
-                /* ViewBag.msg = "Produto cadastrado com sucesso!";
-                    return View();
-                */
+                
+                
             }
             return View();
+        }
+        //LISTA DE PRODUTOS
+        public ActionResult ListarProduto()
+        {
+            return View(produtoDLL.listaProduto());
         }
 
     }

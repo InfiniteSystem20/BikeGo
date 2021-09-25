@@ -14,7 +14,9 @@ namespace ProjetoBikeBase.Models.DTO
         public string HoraAtend { get; set; }
         public string HrFinal { get; set; }
         public decimal ValorTotal { get; set; }
+        public string StatusAlug { get; set; }
 
+     
         public string confAgendamento { get; set; }
     }
 }
