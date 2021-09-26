@@ -1,9 +1,104 @@
-﻿
+﻿@model ProjetoBikeBase.Models.DTO.AluguelBuscaDTO
+
 @{
     ViewBag.Title = "ALuguelDetalhes";
 }
 
-<h2>Detalhes</h2>
-@Html.Raw(ViewBag.GridViewString)
+<h2>ALuguel Detalhes</h2>
 
+<div>
+    <h4>AluguelBuscaDTO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdAluguel)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(model => model.IdAluguel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeCliente)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CPFCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPFCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndCliente)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bicicleta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bicicleta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataAtend)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataAtend)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoraAtend)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoraAtend)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HrFinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HrFinal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorTotal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

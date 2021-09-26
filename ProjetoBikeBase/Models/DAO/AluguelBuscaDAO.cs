@@ -38,7 +38,7 @@ namespace ProjetoBikeBase.Models.DAO
                                 aluguel.IdAluguel = (int)dr["Código"];
                                 aluguel.NomeCliente = (String)dr["Cliente"];
                                 aluguel.Bicicleta = (String)dr["Bicicleta"];
-                                aluguel.DataAtend = Convert.ToDateTime( dr["Data"]).ToString("dd'/'MM'/'yyyy");
+                                aluguel.DataAtend = Convert.ToDateTime(dr["Data"]).ToString("dd'/'MM'/'yyyy");
                                 aluguel.HoraAtend = (String)dr["Inicil"];
                                 aluguel.HrFinal = (String)dr["Final"];
                                 aluguel.ValorTotal = (decimal)dr["Total"];
@@ -53,12 +53,12 @@ namespace ProjetoBikeBase.Models.DAO
             catch (MySqlException ex)
             {
 
-                throw new Exception("Erro no banco ao Listar usuario" + ex.Message);
+                throw new Exception("Erro no banco ao Listar aluguel" + ex.Message);
             }
             catch (Exception ex)
             {
 
-                throw new Exception("Erro na aplicação ao Listar usuario" + ex.Message);
+                throw new Exception("Erro na aplicação ao Listar aluguel" + ex.Message);
             }
         }
         //CANCELAR ALUGUEL
@@ -70,13 +70,6 @@ namespace ProjetoBikeBase.Models.DAO
             {
                 String sql = "UPDATE tbAluguel set StatusAlug = @StatusAlug where IdAluguel = @IdAluguel ";
 
-                //String sql = " UPDATE tbAluguel SET NomeCliente=@NomeCliente,CPFCliente=@CPFCliente,TelCliente=@TelCliente, " +
-                //            " EmailCliente=@EmailCliente, EndCliente=@EndCliente, NascCli=@NascCli   WHERE IdCliente = @IdCliente ";
-
-                //String sql = " CALL AlterCliente()NomeCliente=@NomeCliente,CPFCliente=@CPFCliente,TelCliente=@TelCliente," +
-                //             " EmailCliente=@EmailCliente, EndCliente=@EndCliente, NascCli=@NascCli   WHERE IdCliente = @IdCliente";
-
-                //AlterCliente
                 con = new MySqlConnection(_conexaoMySQL);
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@IdAluguel", aluguel.IdAluguel);
@@ -99,6 +92,53 @@ namespace ProjetoBikeBase.Models.DAO
             finally
             {
                 con.Close();
+            }
+        }
+        //DETALHES DO ALUGUEL
+        public List<AluguelBuscaDTO> selectListAluguelDetalhes()
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(_conexaoMySQL))
+                {
+                    using (MySqlCommand command = new MySqlCommand("CALL SelecionarAluguelDetalhes( )", conn))
+                    {
+                        conn.Open();
+                        List<AluguelBuscaDTO> listaAluguel = new List<AluguelBuscaDTO>();
+                        using (MySqlDataReader dr = command.ExecuteReader())
+                        {
+                            while (dr.Read())
+                            {
+                                AluguelBuscaDTO aluguel = new AluguelBuscaDTO();
+                                aluguel.IdAluguel = (int)dr["Código"];
+                                aluguel.NomeCliente = (String)dr["Cliente"];
+                                aluguel.CPFCliente = (String)dr["CPF"];
+                                aluguel.EmailCliente = (String)dr["Telefone"];
+                                aluguel.TelCliente = (String)dr["Email"];
+                                aluguel.EndCliente = (String)dr["Endereço"];
+                                aluguel.Bicicleta = (String)dr["Bicicleta"];
+                                aluguel.DataAtend = Convert.ToDateTime(dr["Data"]).ToString("dd'/'MM'/'yyyy");
+                                aluguel.HoraAtend = (String)dr["Inicil"];
+                                aluguel.HrFinal = (String)dr["Final"];
+                                aluguel.ValorTotal = (decimal)dr["Total"];
+
+
+                                listaAluguel.Add(aluguel);
+                            }
+                        }
+                        return listaAluguel;
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+
+                throw new Exception("Erro no banco ao Listar aluguel" + ex.Message);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro na aplicação ao Listar aluguel" + ex.Message);
             }
         }
     }

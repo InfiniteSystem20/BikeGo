@@ -106,21 +106,12 @@ namespace ProjetoBikeBase.Controllers
         {
             return View(aluguelBuscaDLL.listaAluguel());
         }
-        //AluguelBuscaDTO Detalhes
-
-        public ActionResult ALuguelDetalhes()
+        //ALUGUEL Detalhes
+        public ActionResult ALuguelDetalhes(int id)
         {
-            GridView gvAtend = new GridView();
-            gvAtend.AutoGenerateColumns = false;
-            gvAtend.DataSource = aluguelDAO.selecionaAlugel();
-            gvAtend.DataBind();
-            StringWriter sw = new StringWriter();
-            HtmlTextWriter htw = new HtmlTextWriter(sw);
-            gvAtend.RenderControl(htw);
-            ViewBag.GridViewString = sw.ToString();
-            return View();
+            return View(aluguelBuscaDLL.listaAluguelDetalhes().Find(aluguelBuscaDTO => aluguelBuscaDTO.IdAluguel == id));
         }
-
+        
         // CANCELAR ALUGUEL
         public ActionResult CancelarAluguel(int id)
         {

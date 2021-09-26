@@ -59,10 +59,10 @@
             @Html.DisplayFor(modelItem => item.ValorTotal)
         </td>
         <td>
-            @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+            @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |*@
 
-            @Html.ActionLink("Cancelar", "CancelarAluguel", new { id = item.IdAluguel }, new { onclick = "return confirm('Deseja realmente Cancelar?');" })
+            @Html.ActionLink("Cancelar", "CancelarAluguel", new { id = item.IdAluguel }, new { onclick = "return confirm('Deseja realmente Cancelar?');" }) |
+            @Html.ActionLink("Details", "ALuguelDetalhes", new { id = item.IdAluguel })
         </td>
     </tr>
 }

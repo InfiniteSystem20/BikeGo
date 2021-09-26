@@ -25,7 +25,20 @@ namespace ProjetoBikeBase.Models.DLL
                 throw ex;
             }
         }
-        //ALTERAR CLIENTE
+        //SELECIONA LISTA de ALUGUEL DETALHES
+        public List<AluguelBuscaDTO> listaAluguelDetalhes()
+        {
+            try
+            {
+                dal = new AluguelBuscaDAO();
+                return dal.selectListAluguelDetalhes();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        //CANCELAR ALUGUEL
         public void CancelarAlugeul(AluguelBuscaDTO Aluguel)
         {
             try

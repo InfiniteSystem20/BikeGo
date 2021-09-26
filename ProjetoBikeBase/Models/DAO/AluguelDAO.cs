@@ -38,14 +38,12 @@ namespace ProjetoBikeBase.Models.DAO
 
             con.MyDesConectarBD();
         }
+        //INSERIR ALUGUEL
         public void inserirAluguel(AluguelDTO cm)
         {
             string StatusAlug = "Alugado";
 
-            //MySqlCommand cmd = new MySqlCommand("insert into tbAluguel(DataAtend, HoraAtend, HrFinal, ValorTotal, IdCliente, IdProduto)" +
-            //                                    "values (@DataAtend, @HoraAtend,@HrFinal, @ValorTotal,@IdCliente, @IdProduto)", con.MyConectarBD());
-
-            MySqlCommand cmd = new MySqlCommand("CALL cadAluguel(@DataAtend, @HoraAtend,@HrFinal, @ValorTotal,@IdCliente, @IdProduto, @StatusAlug);", con.MyConectarBD());
+                        MySqlCommand cmd = new MySqlCommand("CALL cadAluguel(@DataAtend, @HoraAtend,@HrFinal, @ValorTotal,@IdCliente, @IdProduto, @StatusAlug);", con.MyConectarBD());
             cmd.Parameters.Add("@DataAtend", MySqlDbType.VarChar).Value = cm.DataAtend;
             cmd.Parameters.Add("@HoraAtend", MySqlDbType.VarChar).Value = cm.HoraAtend;
             cmd.Parameters.Add("@HrFinal", MySqlDbType.VarChar).Value = cm.HrFinal;
@@ -59,7 +57,6 @@ namespace ProjetoBikeBase.Models.DAO
         }
         public DataTable selecionaAlugel()
         {
-            //MySqlCommand cmd = new MySqlCommand("Select * from tbAtendimento", con.MyConectarBD());
                 MySqlCommand cmd = new MySqlCommand("SELECT t1.IdAluguel as Código,t2.nomeCliente as Cliente,t3.NomeProd as Bicicleta," +
                                            " t1.DataAtend as Data,t1.horaAtend As Inicil,t1.hrFinal As Fianal " +
                                            " FROM tbAluguel as t1 " +

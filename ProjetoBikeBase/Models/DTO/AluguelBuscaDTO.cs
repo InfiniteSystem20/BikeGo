@@ -14,6 +14,18 @@ namespace ProjetoBikeBase.Models.DTO
         [Display(Name = "Nome do Cliente")]
         public string NomeCliente { get; set; }
 
+        [Display(Name = "CPF")]
+        public string CPFCliente { get; set; }
+
+        [Display(Name = "E-mail")]
+        public string EmailCliente { get; set; }
+
+        [Display(Name = "Telefone")]
+        public string TelCliente { get; set; }
+
+        [Display(Name = "Endereço")]
+        public string EndCliente { get; set; }
+
         [Display(Name = "Bicicleta")]
         public string Bicicleta { get; set; }
 
@@ -29,5 +41,9 @@ namespace ProjetoBikeBase.Models.DTO
 
         [Display(Name = "Valor Total")]
         public decimal ValorTotal { get; set; }
+
+        
+        
+        
     }
 }
