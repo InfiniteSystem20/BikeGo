@@ -69,12 +69,11 @@ namespace ProjetoBikeBase.Models.DAO
             try
             {
                 String sql = "UPDATE tbAluguel set StatusAlug = @StatusAlug where IdAluguel = @IdAluguel ";
-
+                //String sql = "CALL UpdateAluguelCancelar(StatusAlug=StatusAlug,IdAluguel=IdAluguel)";
                 con = new MySqlConnection(_conexaoMySQL);
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@IdAluguel", aluguel.IdAluguel);
                 cmd.Parameters.AddWithValue("@StatusAlug", StatusAlug);
-                ;
 
                 con.Open();
                 cmd.ExecuteNonQuery();
